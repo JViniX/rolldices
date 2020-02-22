@@ -34,8 +34,15 @@ var scenes;
         // PUBLIC METHODS
         //initialize and instatiate
         Play.prototype.Start = function () {
+            // Defining the table background.
+            this._table = new objects.Image(config.Game.ASSETS.getResult("table"), "table", 0, 0, false);
+            //this._table.width = 640;
+            //this._table.height = 580;
+            this._table.scaleX = this._table.width;
+            this._table.scaleY = this._table.height;
             // buttons
             this._rollButton = new objects.Button(config.Game.ASSETS.getResult("rollButton"), 320, 550, true);
+            this._nextButton = new objects.Button(config.Game.ASSETS.getResult("nextButton"), 520, 550, true);
             // dices            
             this._dice1 = new objects.Image(config.Game.ASSETS.getResult("1"), "dice1", 110, 110, true);
             this._dice2 = new objects.Image(config.Game.ASSETS.getResult("2"), "dice2", 310, 110, true);
@@ -89,6 +96,7 @@ var scenes;
         };
         Play.prototype.Main = function () {
             var _this = this;
+            this.addChild(this._table);
             // Adding the images to the scene.
             this.addChild(this._dice1);
             this.addChild(this._dice2);
@@ -105,9 +113,13 @@ var scenes;
             this.addChild(this._lbl6);
             // Adding the button to the scene.
             this.addChild(this._rollButton);
+            this.addChild(this._nextButton);
             // Assigning the method RollDices to the button
             this._rollButton.on("click", function () {
                 _this.RollDices();
+            });
+            this._nextButton.on("click", function () {
+                config.Game.SCENE = scenes.State.SCENEBONUS;
             });
         };
         return Play;

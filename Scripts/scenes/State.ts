@@ -5,7 +5,7 @@ module scenes
         NO_SCENE = -1,
         START,
         PLAY,
-        END,
+        SCENEBONUS,
         NUM_OF_SCENES
     }
 }

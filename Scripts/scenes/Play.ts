@@ -11,7 +11,10 @@ module scenes
     export class Play extends objects.Scene
     {
         // PRIVATE INSTANCE MEMBERS
+        private _table: objects.Image;
+
         private _rollButton: objects.Button;
+        private _nextButton: objects.Button;
 
         private _dice1: objects.Image;
         private _dice2: objects.Image;
@@ -45,8 +48,16 @@ module scenes
         //initialize and instatiate
         public Start(): void 
         {
+            // Defining the table background.
+            this._table = new objects.Image(config.Game.ASSETS.getResult("table"), "table", 0, 0, false);
+            //this._table.width = 640;
+            //this._table.height = 580;
+            this._table.scaleX = this._table.width;
+            this._table.scaleY = this._table.height;
+
             // buttons
             this._rollButton = new objects.Button(config.Game.ASSETS.getResult("rollButton"), 320, 550, true);
+            this._nextButton = new objects.Button(config.Game.ASSETS.getResult("nextButton"), 520, 550, true);
 
             // dices            
             this._dice1 = new objects.Image(config.Game.ASSETS.getResult("1"), "dice1", 110, 110, true);
@@ -117,6 +128,7 @@ module scenes
         
         public Main(): void 
         {
+            this.addChild(this._table);
 
             // Adding the images to the scene.
             this.addChild(this._dice1);
@@ -136,12 +148,16 @@ module scenes
 
             // Adding the button to the scene.
             this.addChild(this._rollButton);
+            this.addChild(this._nextButton);
 
             // Assigning the method RollDices to the button
             this._rollButton.on("click", ()=>{
                 this.RollDices();
             });
             
+            this._nextButton.on("click", ()=>{
+                config.Game.SCENE = scenes.State.SCENEBONUS;
+            });
 
         }
 

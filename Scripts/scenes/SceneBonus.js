@@ -14,11 +14,11 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var scenes;
 (function (scenes) {
-    var End = /** @class */ (function (_super) {
-        __extends(End, _super);
+    var SceneBonus = /** @class */ (function (_super) {
+        __extends(SceneBonus, _super);
         // PUBLIC PROPERTIES
         // CONSTRUCTOR
-        function End() {
+        function SceneBonus() {
             var _this = _super.call(this) || this;
             _this.Start();
             return _this;
@@ -26,27 +26,24 @@ var scenes;
         // PRIVATE METHODS
         // PUBLIC METHODS
         // Initializing and Instantiating
-        End.prototype.Start = function () {
+        SceneBonus.prototype.Start = function () {
             //instantiate a new Text object
             this._endLabel = new objects.Label("End Scene", "80px", "Consolas", "#FFFF00", 320, 180, true);
             // buttons
             this._backButton = new objects.Button(config.Game.ASSETS.getResult("backButton"), 320, 430, true);
-            this._ocean = new objects.Ocean();
             this.Main();
         };
-        End.prototype.Update = function () {
-            this._ocean.Update();
+        SceneBonus.prototype.Update = function () {
         };
-        End.prototype.Main = function () {
-            this.addChild(this._ocean);
+        SceneBonus.prototype.Main = function () {
             this.addChild(this._endLabel);
             this.addChild(this._backButton);
             this._backButton.on("click", function () {
                 config.Game.SCENE = scenes.State.PLAY;
             });
         };
-        return End;
+        return SceneBonus;
     }(objects.Scene));
-    scenes.End = End;
+    scenes.SceneBonus = SceneBonus;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=End.js.map
+//# sourceMappingURL=SceneBonus.js.map

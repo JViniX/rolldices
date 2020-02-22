@@ -16,6 +16,7 @@ var Game = (function () {
     var currentScene;
     var assets;
     var assetManifest = [
+        { id: "table", src: "./Assets/images/table.png" },
         { id: "button", src: "./Assets/images/button.png" },
         { id: "placeholder", src: "./Assets/images/placeholder.png" },
         { id: "startButton", src: "./Assets/images/startButton.png" },
@@ -81,9 +82,9 @@ var Game = (function () {
                 console.log("switch to Play Scene");
                 currentScene = new scenes.Play();
                 break;
-            case scenes.State.END:
+            case scenes.State.SCENEBONUS:
                 console.log("switch to End Scene");
-                currentScene = new scenes.End();
+                currentScene = new scenes.SceneBonus();
                 break;
         }
         currentSceneState = config.Game.SCENE;
