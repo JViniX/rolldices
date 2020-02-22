@@ -1,5 +1,14 @@
 //IIFE - Immediately Invoked Function Expression
 //means -> self-executing anonymous function
+
+/**
+ * Julio Vinicius A. de Carvalho
+ * 301016383
+ * Feb 22, 2020
+ * Roll Dices - Test 1
+ * COMP397 - Web Gaming Development
+ */
+
 let Game = (function(){
 
     // variable declarations
@@ -18,8 +27,13 @@ let Game = (function(){
         {id:"startButton", src:"./Assets/images/startButton.png"},
         {id:"nextButton", src:"./Assets/images/nextButton.png"},
         {id:"backButton", src:"./Assets/images/backButton.png"},
-        {id:"ocean", src:"./Assets/images/ocean.gif"},
-        {id:"plane", src:"./Assets/images/plane.png"}
+        {id:"rollButton", src:"./Assets/images/rollButton.png"},
+        {id:"1", src:"./Assets/images/1.png"},
+        {id:"2", src:"./Assets/images/2.png"},
+        {id:"3", src:"./Assets/images/3.png"},
+        {id:"4", src:"./Assets/images/4.png"},
+        {id:"5", src:"./Assets/images/5.png"},
+        {id:"6", src:"./Assets/images/6.png"}
     ];
 
     function Preload():void

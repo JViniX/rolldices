@@ -1,3 +1,11 @@
+/**
+ * Julio Vinicius A. de Carvalho
+ * 301016383
+ * Feb 22, 2020
+ * Roll Dices - Test 1
+ * COMP397 - Web Gaming Development
+ */
+
 module scenes
 {
     export class Start extends objects.Scene
