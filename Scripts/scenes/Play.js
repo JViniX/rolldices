@@ -51,12 +51,12 @@ var scenes;
             this._dice5 = new objects.Image(config.Game.ASSETS.getResult("5"), "dice5", 310, 360, true);
             this._dice6 = new objects.Image(config.Game.ASSETS.getResult("6"), "dice6", 510, 360, true);
             // labels
-            this._lbl1 = new objects.Label("1", "22px", "Consolas", "#000000", 110, 220, true);
-            this._lbl2 = new objects.Label("2", "22px", "Consolas", "#000000", 310, 220, true);
-            this._lbl3 = new objects.Label("3", "22px", "Consolas", "#000000", 510, 220, true);
-            this._lbl4 = new objects.Label("4", "22px", "Consolas", "#000000", 110, 470, true);
-            this._lbl5 = new objects.Label("5", "22px", "Consolas", "#000000", 310, 470, true);
-            this._lbl6 = new objects.Label("6", "22px", "Consolas", "#000000", 510, 470, true);
+            this._lbl1 = new objects.Label("1", "22px", "Consolas", "#FFFFFF", 110, 220, true);
+            this._lbl2 = new objects.Label("2", "22px", "Consolas", "#FFFFFF", 310, 220, true);
+            this._lbl3 = new objects.Label("3", "22px", "Consolas", "#FFFFFF", 510, 220, true);
+            this._lbl4 = new objects.Label("4", "22px", "Consolas", "#FFFFFF", 110, 470, true);
+            this._lbl5 = new objects.Label("5", "22px", "Consolas", "#FFFFFF", 310, 470, true);
+            this._lbl6 = new objects.Label("6", "22px", "Consolas", "#FFFFFF", 510, 470, true);
             this.Main();
         };
         Play.prototype.Update = function () {
