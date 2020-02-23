@@ -1,3 +1,3 @@
-# COMP397-W2020-Test-Template-v2
+# COMP397-W2020-Test-v2
 
 ## Implementation by Julio Carvalho
