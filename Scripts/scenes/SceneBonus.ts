@@ -40,10 +40,6 @@ module scenes
         {
              // Defining the table background.
             this._table = new objects.Image(config.Game.ASSETS.getResult("table"), "table", 0, 0, false);
-            //this._table.width = 640;
-            //this._table.height = 580;
-            // this._table.scaleX = this._table.width;
-            // this._table.scaleY = this._table.height;
 
             // buttons
             this._rollButton = new objects.Button(config.Game.ASSETS.getResult("rollButton"), 320, 550, true);
